@@ -37,20 +37,26 @@ pokedex_project/
 ```bash
 git clone https://github.com/usuario/Data-Pokedex.git
 cd pokedex_project
+```
 
 2. Configure as variáveis de ambiente usadas no DAG (para PostgreSQL):
 
+```bash
 POSTGRES_USER=newton
 POSTGRES_PASSWORD=12345678
+```
 
 3. Ajuste os caminhos no DAG, se necessário:
 
+```bash
 RAW_DATA_PATH → diretório onde os JSONs serão salvos
 
 spark.jars → caminho para o driver JDBC do PostgreSQL
+```
 
 4. Inicialize o banco PostgreSQL (se ainda não existir):
 
+```bash
 -- Acesse o PostgreSQL como usuário postgres
 psql -U postgres
 -- Crie o banco
@@ -58,13 +64,16 @@ CREATE DATABASE pokedex_db;
 -- Crie o usuário newton e dê permissões
 CREATE USER seu_usuario WITH PASSWORD sua_senha;
 GRANT ALL PRIVILEGES ON DATABASE pokedex_db TO seu_usuario;
+```
 
 🚀 Rodando o DAG
 1. Inicialize o Airflow:
 
+```bash
 airflow db init
 airflow webserver --port 8080
 airflow scheduler
+```
 
 2. Abra o Airflow na web (http://localhost:8080) e ative o DAG pokedex_postgres_dag.
 
@@ -86,8 +95,12 @@ airflow scheduler
 
 - Para reiniciar os dados no banco:
 
+```bash
 TRUNCATE TABLE pokemon_pokedex;
+```
 
 - Para verificar o conteúdo da tabela:
 
+```bash
 SELECT * FROM pokemon_pokedex;
+```
