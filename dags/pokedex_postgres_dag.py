@@ -9,7 +9,7 @@ from airflow.decorators import dag, task
 from airflow.utils.dates import days_ago
 from pyspark.sql import SparkSession
 
-RAW_DATA_PATH = "/home/newton/airflow/data/raw/"
+RAW_DATA_PATH = "/home/seu_usuario/airflow/data/raw/"
 POKEMON_LIMIT = 151
 
 # Configuração do banco
