@@ -145,7 +145,7 @@ source airflow_venv/bin/activate  # Linux/WSL
 
 ## 🚀 Rodando o DAG
 
-1. Inicialize o Airflow:
+#### 1. Inicialize o Airflow:
 
 ```bash
 airflow db init
@@ -153,9 +153,9 @@ airflow webserver --port 8080
 airflow scheduler
 ```
 
-2. Abra o Airflow na web (http://localhost:8080) e ative o DAG pokedex_postgres_dag.
+#### 2. Abra o Airflow na web (http://localhost:8080) e ative o DAG pokedex_postgres_dag.
 
-3. O DAG executa as seguintes etapas:
+#### 3. O DAG executa as seguintes etapas:
 
 - Busca a lista de Pokémon na PokéAPI (limitada pelo POKEMON_LIMIT no DAG)
 
