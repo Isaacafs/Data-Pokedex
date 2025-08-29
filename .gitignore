@@ -1,0 +1,11 @@
+# Ignorar ambiente virtual
+airflow_venv/
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Configurações locais
+.env
